@@ -18,3 +18,8 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.movie-card-img {
+  width: auto;
+  height: 200px;
+}
