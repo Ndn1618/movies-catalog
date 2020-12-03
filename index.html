@@ -13,7 +13,47 @@
 
 <body>
 
-  <h1 class="sr-only">Search movies you want to watch!</h1>
+  <h1 class="is-sr-only">Search movies you want to watch!</h1>
+
+  <section>
+    <div class="container px-5 pt-5">
+      <h2 class="has-text-centered is-size-3 mb-3">Movies catalog</h2>
+      <form action="https://echo.htmlacademy.ru" method="GET">
+        <div class="field has-addons column is-full">
+          <div class="control is-flex-grow-1">
+            <input class="input is-primary" type="text" name="movie-name" aria-label="Enter movie name"
+              placeholder="Enter movie title" required>
+          </div>
+          <div class="control">
+            <button class="button is-primary border" type="submit">Search</button>
+          </div>
+        </div>
+      </form>
+
+      <hr class="my-3">
+    </div>
+  </section>
+
+  <section>
+    <div class="container px-5">
+      <div class="column is-half">
+        <ul></ul>
+      </div>
+      <div class="column is-half">
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Templates -->
+
+  <template class="found-movie-template">
+    <li class="is-flex is-align-items-center">
+      <span class="is-flex-grow-1 is-size-5">Movie name</span>
+      <button class="button is-info is-normal" type="button">Info</button>
+    </li>
+  </template>
 
 
   <script src="js/utils.js"></script>
