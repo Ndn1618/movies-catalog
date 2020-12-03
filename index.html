@@ -18,14 +18,14 @@
   <section>
     <div class="container px-5 pt-5">
       <h2 class="has-text-centered is-size-3 mb-3">Movies catalog</h2>
-      <form action="https://echo.htmlacademy.ru" method="GET">
+      <form class="movies-form" action="https://echo.htmlacademy.ru" method="GET">
         <div class="field has-addons column is-full">
           <div class="control is-flex-grow-1">
-            <input class="input is-primary" type="text" name="movie-name" aria-label="Enter movie name"
+            <input class="movie-name-input input is-primary" type="text" name="movie-name" aria-label="Enter movie name"
               placeholder="Enter movie title" required>
           </div>
           <div class="control">
-            <button class="button is-primary border" type="submit">Search</button>
+            <button class="movie-search-button button is-primary border" type="submit">Search</button>
           </div>
         </div>
       </form>
@@ -36,28 +36,56 @@
 
   <section>
     <div class="container px-5">
-      <div class="column is-half">
-        <ul></ul>
+      <div class="is-flex">
+        <ul class="movies-list column"></ul>
+        <div class="movie-card-wrapper column"></div>
       </div>
-      <div class="column is-half">
 
-      </div>
+      <nav class="pagination px-3" role="navigation" aria-label="pagination">
+        <ul class="movies-pagination-list pagination-list"></ul>
+      </nav>
     </div>
   </section>
 
 
   <!-- Templates -->
 
-  <template class="found-movie-template">
-    <li class="is-flex is-align-items-center">
-      <span class="is-flex-grow-1 is-size-5">Movie name</span>
-      <button class="button is-info is-normal" type="button">Info</button>
+  <template id="found-movie-template">
+    <li class="is-flex is-align-items-center mb-1 is-bordered panel p-2">
+      <span class="movie-name-span is-flex-grow-1 mr-3">Movie name</span>
+      <button class="movie-info-button button is-info is-normal" type="button" data-movie-id="">Info</button>
     </li>
+  </template>
+
+  <template id="pagination-link-template">
+    <li>
+      <a class="movie-pagination-link pagination-link">1</a>
+    </li>
+  </template>
+
+  <template id="template-card">
+    <div class="movie-card card" data-imdb-id="">
+      <div class="is-flex is-align-items-center pl-5">
+        <figure class="movie-card-figure mr-3">
+          <img class="movie-card-img" src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image"
+            height="200">
+        </figure>
+        <div class="movie-card-title">
+          <h3 class="card-title title is-4"></h3>
+        </div>
+      </div>
+      <div class="card-content">
+        <div class="movie-card-plot content">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+        </div>
+      </div>
+    </div>
   </template>
 
 
   <script src="js/utils.js"></script>
-  <script src="js/scripts.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
