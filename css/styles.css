@@ -1,0 +1,72 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Livvic", "Arial", sans-serif;
+  background-color: #8a2be2;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+.movies__heading {
+  color: #ffffff;
+  text-shadow: 2px 4px #000;
+}
+
+.movie__rate::before {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  background-image: url("../img/yellow-star.svg");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  content: "";
+}
+
+@media only screen and (max-width:576px) {
+  .movie-sort-by-select {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width:577px) and (max-width:991px) {
+  .movies__form {
+    flex-wrap: nowrap!important;
+  }
+
+  .movie-sort-by-select {
+    width: 30%;
+  }
+}
+
+@media only screen and (min-width:992px) {
+  .movies__from-wrapper {
+    flex-grow: 1;
+  }
+
+  .movies__searchby-select {
+    width: 25%;
+  }
+
+  .movie-sort-by-select {
+    width: 15%;
+  }
+}
