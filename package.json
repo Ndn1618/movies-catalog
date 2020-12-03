@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "jquery": "^3.5.1",
+    "bulma": "^0.9.1",
     "normalize.css": "^8.0.1"
   },
   "repository": {
