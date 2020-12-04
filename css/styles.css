@@ -23,3 +23,7 @@ img {
   width: auto;
   height: 200px;
 }
+
+.movie-card-title {
+  width: 50%;
+}
