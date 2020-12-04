@@ -65,16 +65,16 @@
 
   <template id="template-card">
     <div class="movie-card card" data-imdb-id="">
-      <div class="is-flex is-align-items-center pl-5">
-        <figure class="movie-card-figure mr-3">
+      <div class="movie-card-img-title-wrapper is-flex is-flex-wrap-wrap is-align-items-center pl-5">
+        <figure class="movie-card-figure mr-3 mb-1 is-flex-shrink-0">
           <img class="movie-card-img" src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image"
-            height="200">
+            onerror="this.onerror=null; this.src='img/no_poster.jpg'" width="135" height="200">
         </figure>
         <div class="movie-card-title">
           <h3 class="card-title title is-4"></h3>
         </div>
       </div>
-      <div class="card-content">
+      <div class="card-content pt-1">
         <div class="movie-card-plot content">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Phasellus nec iaculis mauris. <a>@bulmaio</a>.
