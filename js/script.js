@@ -19,7 +19,7 @@ var createMovieCard = function (movie) {
   var elNewMovieCard = elCardTemplate.cloneNode(true);
 
   $_('.movie-card', elNewMovieCard).dataset.imdbId = movie.imdbID;
-  $_('.card-title', elNewMovieCard).textContent = `${movie.Title} ${(movie.Year)}`;
+  $_('.card-title', elNewMovieCard).textContent = `${movie.Title} (${movie.Year})`;
   $_('.movie-card-img', elNewMovieCard).src = movie.Poster;
   $_('.movie-card-img', elNewMovieCard).alt = movie.Title;
   $_('.movie-card-plot', elNewMovieCard).textContent = movie.Plot;
@@ -126,7 +126,7 @@ elMoviesList.addEventListener('click', function (evt) {
     evt.target.classList.add('is-loading');
 
     var movieId = evt.target.dataset.movieId;
-    var API_SEARCH = `httpss://www.omdbapi.com/?apikey=${API_KEY}&i=${movieId}&plot=full`;
+    var API_SEARCH = `https://www.omdbapi.com/?apikey=${API_KEY}&i=${movieId}&plot=full`;
 
     fetch(API_SEARCH).then(function (response) {
       if (!response.ok) {
