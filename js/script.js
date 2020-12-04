@@ -84,7 +84,7 @@ var onMoviesFormSubmit = function (evt) {
     return;
   }
 
-  var API_SEARCH = `http://omdbapi.com/?apikey=${API_KEY}&s=${SEARCH_QUERY}`;
+  var API_SEARCH = `https://omdbapi.com/?apikey=${API_KEY}&s=${SEARCH_QUERY}`;
 
   fetch(API_SEARCH).then(function (response) {
     if (!response.ok) {
@@ -106,7 +106,7 @@ elMoviesForm.addEventListener('submit', onMoviesFormSubmit);
 elMoviesPaginationList.addEventListener('click', function (evt) {
   if (evt.target.matches('.movie-pagination-link')) {
     var pageNumber = Number(evt.target.textContent);
-    var API_SEARCH = `http://omdbapi.com/?apikey=${API_KEY}&s=${SEARCH_QUERY}&page=${pageNumber}`;
+    var API_SEARCH = `https://omdbapi.com/?apikey=${API_KEY}&s=${SEARCH_QUERY}&page=${pageNumber}`;
   };
 
   fetch(API_SEARCH).then(function (response) {
@@ -126,7 +126,7 @@ elMoviesList.addEventListener('click', function (evt) {
     evt.target.classList.add('is-loading');
 
     var movieId = evt.target.dataset.movieId;
-    var API_SEARCH = `https://www.omdbapi.com/?apikey=${API_KEY}&i=${movieId}&plot=full`;
+    var API_SEARCH = `httpss://www.omdbapi.com/?apikey=${API_KEY}&i=${movieId}&plot=full`;
 
     fetch(API_SEARCH).then(function (response) {
       if (!response.ok) {
