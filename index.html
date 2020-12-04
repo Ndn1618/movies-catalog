@@ -66,9 +66,9 @@
   <template id="template-card">
     <div class="movie-card card" data-imdb-id="">
       <div class="movie-card-img-title-wrapper is-flex is-flex-wrap-wrap is-align-items-center pl-5">
-        <figure class="movie-card-figure mr-3 mb-1 is-flex-shrink-0">
+        <figure class="movie-card-figure mr-3 mb-1 is-flex-shrink-0" loading="lazy">
           <img class="movie-card-img" src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image"
-            onerror="this.onerror=null; this.src='img/no_poster.jpg'" width="135" height="200">
+            onerror="this.onerror=null; this.src='img/no_poster.jpg'" width="135" height="200" loading="lazy">
         </figure>
         <div class="movie-card-title">
           <h3 class="card-title title is-4"></h3>
@@ -84,6 +84,18 @@
   </template>
 
 
+  <!-- Set the options for the global instance of vanilla-lazyload
+  <script>
+    window.lazyLoadOptions = {
+      elements_selector: "[loading=lazy]",
+      use_native: true // ← enables hybrid lazy loading
+    };
+  </script>
+
+  Include vanilla lazyload 12 through an async script
+  <script async src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.0.0/dist/lazyload.min.js"></script> -->
+
+  <script src="js/lazy-loading.js"></script>
   <script src="js/utils.js"></script>
   <script src="js/script.js"></script>
 </body>
